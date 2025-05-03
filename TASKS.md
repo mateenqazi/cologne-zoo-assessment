@@ -95,7 +95,37 @@ The zookeepers report that the table is incomplete and different than usually. M
 
 Please fix the two above problems and outline what was necessarry to do so.
 
-// Your solution
+// Your solution of task 5
+
+After examining the code in `components/TheAnimalTable.vue`, I found that:
+
+1. The Name column was already present in the table (in the third position).
+2. The table was sorting by weight despite the variable being named `animalsSortedByName`.
+3. The age calculation utility was already being used but needed the import.
+
+## Changes Made
+
+1. Fixed the sorting logic to sort by name instead of weight:
+   ```javascript
+   // Before:
+   const animalsSortedByName = computed(() =>
+     props.animals.slice().sort((animalA, animalB) =>
+       animalA.weight - animalB.weight,
+     ),
+   )
+
+   // After:
+   const animalsSortedByName = computed(() =>
+     props.animals.slice().sort((animalA, animalB) =>
+       animalA.name.localeCompare(animalB.name),
+     ),
+   )```
+   
+## Results
+The table now correctly shows:
+- Animal name in the third column
+- Animals sorted alphabetically by name
+- Ages in years instead of raw birthdates
 
 ### Task 6: UI Feature 1
 
