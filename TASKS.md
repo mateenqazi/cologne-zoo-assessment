@@ -74,7 +74,16 @@ I added a README.md file to the project. It provides an overview of the project,
 
 There's a failing test that for the age calculation helper. Can you figure out what is broken in the implementation or the test it is and resolve the problem? All zookeepers are really interested in what is going on here.
 
-// Your solution
+// Your solution of task 4
+Changed the implementation in `utils/useCalculateAgeInYears.ts` from using `Math.round()` to `Math.ceil()` to ensure ages are always rounded up.
+
+```javascript
+// Before
+- return Math.round(differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365))
+
+// After
+- return Math.ceil(differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365))
+```
 
 ### Task 5: UI Fixing and Improvement
 
