@@ -34,7 +34,11 @@ In a first step you should inspect the health of the project and report on every
 
 Please take stock fo the page using developer tools, your instincts, ... and write down below what you find.
 
-// Your solution
+// Your solution of task 1
+1. The `alert` message get wrecked cologne zoo! that appears on page load indicates the site has been compromised.
+
+2. The variable name `ANlMALS` (with lowercase 'l' instead of 'I') in `animals.get.ts` will cause data loading failures.
+
 
 ### Task 2: Get the basics running again
 
@@ -44,7 +48,17 @@ Now that we know that is broken, let's try to get things running again, step by 
 
 Zookeepers reported that the error sometimes changes when reloading the page after the initial start.
 
-// Your solution
+// Your solution of task 2
+
+## Fixed Issues:
+1. Corrected the variable typo in API file: Changed `ANlMALS` to `ANIMALS` in `server/api/animals.get.ts`
+2. Removed the malicious `alert` code from `app.vue`
+
+## Page Description:
+The page now loads and shows the Cologne Zoo dashboard with a table of animals sorted by weight.
+
+## Problem Documentation:
+The application was failing because of a simple typo in a variable name that prevented the API from returning data properly. The changing errors on reload are likely related to the random nature of the fake data generation, particularly with date rendering issues.
 
 ### Task 3: Start the documentation
 
