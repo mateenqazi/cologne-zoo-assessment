@@ -120,7 +120,7 @@ After examining the code in `components/TheAnimalTable.vue`, I found that:
        animalA.name.localeCompare(animalB.name),
      ),
    )```
-   
+
 ## Results
 The table now correctly shows:
 - Animal name in the third column
@@ -131,7 +131,18 @@ The table now correctly shows:
 
 The zookeepers want to be able to see all details of an animal. Please create such a view that allows them to do so, outline anything about your process while adding the view below. The zookeepers didn't have time for more information, sorry. They'll surely be glad to criticize the first version intensly though and will want to know why you went for the approach you chose.
 
-// Your solution
+// Your solution of 6
+
+Found the animal descriptions in `types.ts`
+
+- The table originally had 6 properties; I added the missing ones.
+- Added two new headers: `Height (m)` and `Favourite Fruit`.
+- Added corresponding table cells to display these new properties.
+- Add all properties from Animal interface in types.d.ts to thead (table header) in TheAnimalTable.vue
+- Add properties data to tbody (table body) in TheAnimalTable.vue
+- Add some design in TheAnimalTable.vue and app.vue using Tailwind, e.g : color, border, text transform, hover effect
+
+Updated the v-for loop to include the missing values so that they render properly in the table.
 
 ### Task 7: Logic Feature
 

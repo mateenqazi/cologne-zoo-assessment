@@ -16,23 +16,27 @@ const animalsSortedByName = computed(() =>
 <template>
   <table>
     <thead>
-      <tr>
-        <th>Index</th>
-        <th>Species</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Age (yrs)</th>
-        <th>Weight (kg)</th>
+      <tr class="bg-green-200 text-center border-4">
+        <th class="border-x-4">Index</th>
+        <th class="border-x-4">Species</th>
+        <th class="border-x-4">Name</th>
+        <th class="border-x-4">Gender</th>
+        <th class="border-x-4">Age (yrs)</th>
+        <th class="border-x-4">Weight (kg)</th>
+        <th class="border-x-4">Height (m)</th>
+        <th class="border-x-4">Favourite Fruit</th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="({ species,name, gender, birthdate, weight }, animalIndex) in animalsSortedByName" :key="animalIndex">
-        <td>{{ animalIndex + 1 }}</td>
+      <tr v-for="({ species,name, gender, birthdate, weight, height, favouriteFruit }, animalIndex) in animalsSortedByName" :key="animalIndex"  class="hover:bg-gray-200 hover:text-green-800 hover:text-green-800 bg-gray-100 capitalize text-center border-4">
+        <td class="cursor-pointer">{{ animalIndex + 1 }}</td>
         <td>{{ species }}</td>
         <td>{{ name }}</td>
         <td>{{ gender }}</td>
         <td>{{ useCalculateAgeInYears(birthdate) }}</td>
         <td>{{ weight }}</td>
+        <td>{{ height }}</td>
+         <td>{{ favouriteFruit }}</td>
       </tr>
     </tbody>
   </table>
