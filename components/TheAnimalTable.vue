@@ -28,7 +28,7 @@ const animalsSortedByName = computed(() =>
         <th class="border-x-4">Weight (kg)</th>
         <th class="border-x-4">Height (m)</th>
         <th class="border-x-4">Favourite Fruit</th>
-        <th class="border-x-4">Needed Food per month (kg)</th>
+        <th class="border-x-4 max-w-[150px] break-words whitespace-normal">Monthly Food (kg)</th>
       </tr>
     </thead>
     <tbody>
