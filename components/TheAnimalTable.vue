@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import type { Animal } from '~/types'
+import calculateMonthlyFoodRequirement from '../utils/calculateMonthlyFoodRequirement'
+
+
 
 const props = defineProps<{
   animals: Animal[]
@@ -25,6 +28,7 @@ const animalsSortedByName = computed(() =>
         <th class="border-x-4">Weight (kg)</th>
         <th class="border-x-4">Height (m)</th>
         <th class="border-x-4">Favourite Fruit</th>
+        <th class="border-x-4">Needed Food per month (kg)</th>
       </tr>
     </thead>
     <tbody>
@@ -37,6 +41,7 @@ const animalsSortedByName = computed(() =>
         <td>{{ weight }}</td>
         <td>{{ height }}</td>
          <td>{{ favouriteFruit }}</td>
+         <p> {{ calculateMonthlyFoodRequirement(birthdate, height, weight, favouriteFruit, gender, species) }}</p>
       </tr>
     </tbody>
   </table>

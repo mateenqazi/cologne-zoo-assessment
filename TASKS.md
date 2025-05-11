@@ -157,7 +157,8 @@ To calculate the food an animal needs in kilograms in 1 day, the zookeepers use 
 4. If the animal is male, add 20 %
 5. If the animal is a fish: The required food is 0 kg
 
-// Your solution
+// Your solution of 7
+I created a utility function called `calculateMonthlyFoodRequirement` inside the `utils` folder, in a file named `calculateMonthlyFoodRequirement.ts`. This function handles the food calculation logic based on the defined rules. It performs the necessary math and rounds the result up to the nearest whole number. The calculated value is then displayed on the detail page of each animal in the list.
 
 ### Task 8: Plan New Feature
 
